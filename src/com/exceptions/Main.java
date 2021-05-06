@@ -1,6 +1,7 @@
 package com.exceptions;
 
 import Exceptions.ExceptionsDemo;
+import Generics.GenericList;
 import Generics.List;
 
 import java.io.IOException;
@@ -8,9 +9,9 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        var list = new List();
+        var list = new GenericList<Integer>();
         list.add(1);
-        // WHAT IF WE WANT TO MAKE A LIST OF USERS(WHICH ARE OBJECTS) THEN WE CANNOT USE THE LIST CLASS THERE AND HAVE TO FORM NEW CLASS
-        // WHICH IS JUST CODE REPETITION AND NOT VERY SCALABLE
+        list.get(0);
+        // we can catch our mistakes in compile time rather than catching them in run time
     }
 }
