@@ -9,10 +9,9 @@ public class ExceptionsDemo  {
         var account = new Account();
         // here we are dealing with the throws part , checked exceptions.
         try {
-            account.deposit(-1);
-        } catch (IOException e) {
-            System.out.println("Logging");
-            throw e;
+            account.withdraw(10);
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());
         }
     }
     public static void sayHello(String name){
