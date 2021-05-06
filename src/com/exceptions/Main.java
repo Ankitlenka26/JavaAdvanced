@@ -15,5 +15,7 @@ public class Main {
         System.out.println(max);
         var max1 = Utils.max(new User(10) , new User(20));
         System.out.println(max1); // it will give the hashcode of the object
+
+        Utils.print("Ankit" , 20);
     }
 }
