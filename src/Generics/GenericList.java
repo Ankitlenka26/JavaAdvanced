@@ -1,6 +1,6 @@
 package Generics;
 
-public class GenericList <T> { // represents the type of objets that we want to store in the list
+public class GenericList <T> {
     private T[] items = (T[])new Object[10];
     private int count;
     public void add(T item){
