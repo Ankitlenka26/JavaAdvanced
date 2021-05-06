@@ -6,15 +6,12 @@ import java.text.SimpleDateFormat;
 
 public class ExceptionsDemo {
     public static void show(){
-        // this class should implement the AutoClosable interface for this to work
-        try(var reader = new FileReader("file.txt");
-        var writer = new FileWriter("...")
-        ){ // Now we don't need to explicitly close the resource inside the finally
-            // block , the java compiler does it for us
-            var value = reader.read();
-        }catch (IOException e){
-            // if we cannot read
-            System.out.println("Could not read data!");
+        var account = new Account();
+        // here we are dealing with the throws part , checked exceptions.
+        try {
+            account.deposit(-1);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     public static void sayHello(String name){
